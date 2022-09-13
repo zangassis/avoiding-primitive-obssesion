@@ -17,6 +17,11 @@ public class CustomerService
             amount = productValue;
         }
 
+        if (customer.PhoneNumber.Any(p => char.IsLetter(p)))
+        {
+            throw new Exception("Phone numbers must contain numbers only");
+        }
+
         string message = @$"Name: {customer.Name} - Email: {customer.Email} - Amount: {amount}";
         Console.WriteLine(message);
     }

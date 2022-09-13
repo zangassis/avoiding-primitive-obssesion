@@ -3,14 +3,14 @@ public class Customer
 {
     public string? Name { get; set; }
     public string? Email { get; set; }
-    public string? Phone { get; set; }
+    public PhoneNumber PhoneNumber { get; set; }
     public ClubMember ClubMember { get; set; }
 
-    public Customer(string? name, string? email, string? phone, ClubMember clubMember)
+    public Customer(string? name, string? email, PhoneNumber phoneNumber, ClubMember clubMember)
     {
         Name = name;
         Email = email;
-        Phone = phone;
+        PhoneNumber = phoneNumber;
         ClubMember = clubMember;
     }
 }
